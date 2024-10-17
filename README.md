@@ -40,8 +40,11 @@ Segmentamos las imagenes extraidas de los conjuntos totales para optener compact
 
 
 ![image](https://github.com/user-attachments/assets/f2ac5fe4-55b7-4b55-998b-71f11970e1eb)
+
 ![image](https://github.com/user-attachments/assets/523a4731-e39c-4354-ab68-889939e6187f)
+
 ![image](https://github.com/user-attachments/assets/c06722d4-681e-4397-90ff-b3f68d768cc2)
+
 ![image](https://github.com/user-attachments/assets/09eda7a5-dab3-4a16-9d7a-80adc8f3dea3)
 
 
@@ -49,6 +52,7 @@ Finalmente segmentamos las imagenes que contienen todos los pellets, microplást
 
 
 ![image](https://github.com/user-attachments/assets/98802cef-7809-40b8-bff2-2d44afb65ec8)
+
 ![image](https://github.com/user-attachments/assets/cfcb6c92-8611-4886-ba93-f6b7305c309b)
 
 
@@ -56,10 +60,11 @@ Obtenemos la matriz de confusión. (Mismo código que en el ejemplo)
 
 
 ![image](https://github.com/user-attachments/assets/3126f60c-8803-473d-9327-19826e830e48)
+
 ![image](https://github.com/user-attachments/assets/8e1c62e6-760a-4d7a-89a6-32ee5e5bdcea)
 
 
-Conclusión: La verdad que los resultados del modelo en no son malos del todo, posee una precisión bastante decente puesto que las heuristicas usadas para clasificar los contornos son bastante reveladoras, sin embargo, no se debe ignorar el hecho de que la detección de fragmentos ha sido insuficiente e imprecisa, habría que mejorar la segmentación.
+Conclusión: la verdad que los resultados del modelo en no son malos del todo, posee una precisión bastante decente puesto que las heuristicas usadas para clasificar los contornos son bastante reveladoras, sin embargo, no se debe ignorar el hecho de que la detección de fragmentos ha sido insuficiente e imprecisa, habría que mejorar la segmentación.
 
 
 
