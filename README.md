@@ -33,6 +33,8 @@ Conclusión: La extracción de características de una imagen mediante visión p
 TAREA: Las tres imágenes cargadas en la celda inicial, han sido extraidas de las imágenes de mayor tamaño presentes en la carpeta. La tarea consiste en extraer características (geométricas y/o visuales) e identificar patrones que permitan distinguir las partículas de cada una de las tres clases, evaluando los aciertos y fallos con las imágenes completas considerando las métricas mostradas y la matriz de confusión. La matriz de confusión, muestra para cada clase el número de muestras que se clasifican correctamente de dicha clase, y el número de muestras que se clasifican incorrectamente por cada una de las otras dos clases.
 
 
+El modelo generado en esta tarea de detección de microplásticos ha dado lugar a mejores resultados que en el caso anterior (lo cual no era dificil) gracías a que en este caso los contornos detectados poseían características mas faciles de diferenciar. En este caso he usado el color y la compacticidad puesto que los trozos de alquitran son negros y los pellets son mucho mas circulares que los fragmentos. Evidentemente esto tiene sus limitaciones pero era la forma mas sencilla de aproximarme a un resultado decente. Como bien mencione al principio el verdadero reto de esta práctica a consistido en definir una segmentación generalizable para los tres caso, siendo en el caso de los fragmentos la variable que mas ha sufrido la detección.
+
 En primer lugar cargamos las imagenes, recortamos previamente la imagen de los pellets y la de los fragmentos para eliminar el ruido. Puestos a recortarla en el codigo de forma arbitraria la recorte directamente fuera y genere una nueva imagen.
 
 
@@ -67,7 +69,7 @@ Obtenemos la matriz de confusión. (Mismo código que en el ejemplo)
 ![image](https://github.com/user-attachments/assets/8e1c62e6-760a-4d7a-89a6-32ee5e5bdcea)
 
 
-Conclusión: la verdad que los resultados del modelo en no son malos del todo, posee una precisión bastante decente puesto que las heuristicas usadas para clasificar los contornos son bastante reveladoras, sin embargo, no se debe ignorar el hecho de que la detección de fragmentos ha sido insuficiente e imprecisa, habría que mejorar la segmentación.
+Conclusión: la verdad que los resultados del modelo en no son malos del todo, posee una precisión bastante alta puesto que las heuristicas usadas para clasificar los contornos son bastante reveladoras, sin embargo, no se debe ignorar el hecho de que la detección de fragmentos ha sido insuficiente e imprecisa, habría que mejorar la segmentación.
 
 
 
