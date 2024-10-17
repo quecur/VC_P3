@@ -11,6 +11,7 @@ TAREA: Captura una o varias imágenes con monedas no solapadas. Tras visualizar 
 Nota: Para establecer la correspondencia entre píxeles y milímetros, comentar que la moneda de un euro tiene un diámetro de 23.25 mm. la de 50 céntimos de 24.35, la de 20 céntimos de 22.25, etc.
 Extras: Considerar que la imagen pueda contener objetos que no son monedas y/o haya solape entre las monedas. Demo en vivo.
 
+
 He enfocado la elaboración de esta tarea de tres formas diferentes, finalmente opte por la menos mala, no obstante no estoy satisfecho con el resultado. 
 En primer lugar trate de generalizar la detección fijandome en el interior de la moneda y de esta forma esta no estuviese limitada por la escala de la foto, para ello intente extraer como característica la detección de bordes en el interior de la imagen para así tratar de asignar según la proporción de bordes un valor a la moneda, sin embargo, esto fue un fracaso absoluto, este enfoque se ve muy limitado por la segmentación del interior de la moneda el cual se hace muy dificil por características como el ruido y la iluminación en la imagen.
 
@@ -27,8 +28,8 @@ Finalmente termine por resignarme, para el tercer enfoque me limite a usar el ta
 Conclusión: La extracción de características de una imagen mediante visión por computador se ve significativamente afectada por diversas variables que pueden comprometer su calidad. Para mejorar este modelo, sería necesario enfocarse en optimizar la segmentación de las características mencionadas, o bien encontrar alguna otra propiedad que resultase releveladora.
 
 # Tarea 2
+TAREA: Las tres imágenes cargadas en la celda inicial, han sido extraidas de las imágenes de mayor tamaño presentes en la carpeta. La tarea consiste en extraer características (geométricas y/o visuales) e identificar patrones que permitan distinguir las partículas de cada una de las tres clases, evaluando los aciertos y fallos con las imágenes completas considerando las métricas mostradas y la matriz de confusión. La matriz de confusión, muestra para cada clase el número de muestras que se clasifican correctamente de dicha clase, y el número de muestras que se clasifican incorrectamente por cada una de las otras dos clases.
 
-El modelo generado en esta tarea de detección de microplásticos ha dado lugar a mejores resultados que en el caso anterior (lo cual no era dificil) gracías a que en este caso los contornos detectados poseían características mas faciles de diferenciar. En este caso he usado el color y la compacticidad puesto que los trozos de alquitran son negros y los pellets son mucho mas circulares que los fragmentos. Evidentemente esto tiene sus limitaciones pero era la forma mas sencilla de aproximarme a un resultado decente. Como bien mencione al principio el verdadero reto de esta práctica a consistido en definir una segmentación generalizable para los tres caso, siendo en el caso de los fragmentos la variable que mas ha sufrido la detección.
 
 En primer lugar cargamos las imagenes, recortamos previamente la imagen de los pellets y la de los fragmentos para eliminar el ruido. Puestos a recortarla en el codigo de forma arbitraria la recorte directamente fuera y genere una nueva imagen.
 
