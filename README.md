@@ -3,7 +3,7 @@
 
 # Introducción
 
-En esta práctica se ha tenido que realizar la elaboración dos modelos limitados por el uso de Visión por Computador, es decir, para la extracción de características y segmentación de la imagen tan solo se ha ultilizado la libreria de OpenCV. Esto ha supuesto un verdadero quebradero de cabeza en ambos casos, por un lado en el caso del modelo de detección de monedas la extracción de características ha supuesto un verdadero reto y en el caso de la detección de microplásticos la dificultad ha estado en la segmentación de la imagen sobre todo en el caso de los fragmentos. Es por ello que los modelos tienen unan presición bastante límitado pero en la medida de lo posible he tratado que sean generalizables para detecciones en circunstacias similares.
+En esta práctica se ha tenido que realizar la elaboración dos modelos limitados por el uso de Visión por Computador, es decir, para la extracción de características y segmentación de la imagen tan solo se ha ultilizado la libreria de OpenCV. Esto ha supuesto un verdadero quebradero de cabeza en ambos casos, por un lado en el caso del modelo de detección de monedas la extracción de características ha supuesto un verdadero reto y en el caso de la detección de microplásticos la dificultad ha estado en la segmentación de la imagen sobre todo en el caso de los fragmentos. Es por ello que los modelos tienen unan presición bastante límitada pero en la medida de lo posible he tratado que sean generalizables para detecciones en circunstacias similares.
 
 # Tarea 1
 
@@ -12,9 +12,9 @@ Nota: Para establecer la correspondencia entre píxeles y milímetros, comentar 
 Extras: Considerar que la imagen pueda contener objetos que no son monedas y/o haya solape entre las monedas. Demo en vivo.
 
 
-He enfocado la elaboración de esta tarea de tres formas diferentes, finalmente opte por la menos mala, no obstante no estoy nada satisfecho con el resultado. 
+He enfocado la elaboración de esta tarea de tres formas diferentes, finalmente opte por la menos mala, no obstante, no estoy nada satisfecho con el resultado. 
 
-En primer lugar trate de generalizar la detección fijandome en el interior de la moneda y de esta forma esta no estar limitado por la escala de la foto, para ello intente extraer como característica la detección de bordes en el interior de la imagen para así tratar de asignar según la proporción de bordes un valor a la moneda, sin embargo, esto fue un fracaso absoluto, este enfoque se ve muy limitado por la segmentación del interior de la moneda el cual se hace muy dificil por obstaculos como el ruido y la iluminación en la imagen.
+En primer lugar trate de generalizar la detección fijandome en el interior de la moneda y de esta forma que esta no estuviese limitada por la escala de la foto, para ello intente extraer como característica principal el resultado de la detección de bordes en el interior de la imagen para así tratar de asignar según la proporción de bordes un valor a la moneda, sin embargo, esto fue un fracaso absoluto, este enfoque se ve muy limitado por la segmentación del interior de la moneda la cual se hace muy dificil por obstaculos como el ruido y la iluminación en la imagen.
 
 En segundo lugar para no tener que recurrir al tamaño por el hecho de que este se ve muy afectado por el angulo y la escala de la imagen, intente extraer como característica principal la detección del color, de esta forma si conseguía detectar una moneda de 1 euro o 2 euros en la imagen gracias al color me sería mas sencillo detectar el resto de monedas en la imagen, para ello trate de calcular una especie de proporción de plateado en la imagen. Mediante este enfoque tampoco obtuve ningún resultado concluyente puesto que al igual que en el caso anterior, la detección del color también se vio bastante afectada por el ruido y la iluminación de la imagen.
 
